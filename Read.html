@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Web</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/smile.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto smooth-scroll">
+            <li class="nav-item">
+              <a class="nav-link" id="index" data-offset="90">美食
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Music" data-offset="90">音乐</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Scenery" data-offset="90">风景</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Read" data-offset="90">阅读</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Film" data-offset="30">电影</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Summary" data-offset="90">结业报告</a>
+            </li>
+          </ul>
+          <!-- Social Icon  -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="fab fa-facebook-f light-green-text-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="fab fa-twitter light-green-text-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="fab fa-instagram light-green-text-2"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- Full Page Intro -->
+    <div class="view">
+      <img src="img/45.jpeg">
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+        <!-- Content -->
+        <div class="container px-md-3 px-sm-0">
+          <!--Grid row-->
+          <div class="row wow fadeIn">
+            <!--Grid column-->
+            <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+              <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">阅读</h3>
+              <hr class="hr-light my-4 w-75">
+              <h4 class="subtext-header mt-2 mb-4">书是改造灵魂的工具。人类需要的是启发性的营养。而阅读，正是这种滋养 </h4>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+  </header>
+  <!--Main layout-->
+  <main>
+
+    <hr class="my-5">
+
+    <section id="statistics" class="text-center py-5" style="background-color: #eee;">
+
+      <div class="container">
+        <h2 class="h1-responsive font-weight-bold text-center my-5">阅读统计 </h2>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+            <canvas id="myChart"></canvas>
+            <br>
+            <p class="black-text w-responsive font-weight-light mx-auto mb-5">1. 未成年人人均图书年读量</p>
+          </div>
+          <div class="col-md-5">
+            <canvas id="lineChart"></canvas>
+            <br>
+            <p class="black-text w-responsive font-weight-light mx-auto mb-5">2. 10年来综合阅读率的变化</p>
+          </div>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+            <canvas id="horizontalBar"></canvas>
+            <br>
+            <p class="black-text w-responsive font-weight-light mx-auto mb-5">3. 2016年和2017年各类出版物的阅读量</p>
+          </div>
+          <div class="col-md-5">
+            <canvas id="labelChart"></canvas>
+            <br>
+            <p class="black-text w-responsive font-weight-light mx-auto mb-5">4. 公民看展阅读活动的呼声</p>
+          </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section id="recommendations" class="text-center py-5" style="background-color: #eee;">
+      <div class="container">
+        <h2 class="h1-responsive font-weight-bold text-center my-5">阅读推荐</h2>
+        <div class="main-wrapper">
+          <div class="container-fluid">
+
+            <div class="row">
+              <!--Main column-->
+              <div class="col-md-12">
+                <div class="text-center">
+
+
+
+                </div>
+                <div class="container-fluid mt-5">
+
+                  <ul class="nav md-pills pills-info d-flex justify-content-center" id="myNav">
+                    <li class="nav-item">
+                      <a class="nav-link border border-info" data-toggle="tab" href="#panel1" role="tab"
+                        aria-selected="true">文学</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border border-info active" data-toggle="tab" href="#panel2" role="tab"
+                        aria-selected="false">小说</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border border-info" data-toggle="tab" href="#panel3" role="tab"
+                        aria-selected="false">经济</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border border-info" data-toggle="tab" href="#panel4" role="tab">军事</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border border-info" data-toggle="tab" href="#panel5" role="tab">法律</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border border-info" data-toggle="tab" href="#panel6" role="tab">医学
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- Tab panels -->
+                  <div class="tab-content pt-0">
+
+                    <!--Panel 1-->
+                    <div class="tab-pane fade p-5" id="panel1" role="tabpanel">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;山居笔记&raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> 余秋雨 (中国)</strong>
+                          </h6>
+                          <p class="pb-3">《山居记》是余秋雨的第二部散文集。
+                            1992年写的，1994年完成的，主要描述了作者在他探访中华文明的过程中的感悟
+                            。
+                            整部作品表达了他对文明兴衰的感受，
+                            他呼吁尊重文化。 以及对健全人格的向往。
+                            该书于1995年8月在台湾出版，大陆版由
+                            文汇出版社 1998 年 9 月。
+                          </p>
+                          <br>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                            了解更多</a>
+
+                        </div>
+                        <!--Grid column-->
+
+                        <div class="col-md-2"></div>
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;秋天的思念&raquo; </strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> 史铁生 (中国)</strong>
+                          </h6>
+                          <p class="pb-3">《秋天的思念》，1981年当代中国作家史铁生的散文
+                            。
+                            这篇文章讲述了石铁生对已故母亲的回忆。
+                            体现了史铁生对母亲的深刻记忆，对母亲无尽的爱，
+                            对母爱的赞美，史铁生对“孩子想养但
+                            亲人不等”,
+                            而对于母亲早年不理解的悔恨，非常感人。
+                            全文语言通俗易懂，没有精心编织雕琢，但
+                            句句感伤，言语如金。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                            了解更多</a>
+                        </div>
+                        <!--Grid row-->
+                      </div>
+                      <br>
+                      <!--Grid row-->
+                      <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;目送&raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> 龙应台 (中国)</strong>
+                          </h6>
+                          <p class="pb-3">
+                            《目送》是一本生死笔记，深邃，忧伤，美丽。《目送》的七十三篇散文，写父亲的逝、母亲的老、儿子的离、朋友的牵挂、兄弟的携手共行，写失败和脆弱、失落和放手，写缠绵不舍和绝然的虚无。她写尽了幽微，如烛光冷照山壁。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                            了解更多</a>
+                        </div>
+                      </div>
+                      <!--Grid row-->
+
+                    </div>
+
+                    <!--/.Panel 1-->
+
+                    <div class="tab-pane fade in show active p-5" id="panel2" role="tabpanel">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;平凡的世界&raquo;</strong>
+                          </h3><br>
+                          <h6 class="purple-text">
+                            <strong> 路遥 (中国)</strong>
+                          </h6>
+                          <p class="pb-3">《平凡的世界》是中国作家路遥创作的百万字小说。
+                            ，是当代城乡社会生活的全景图。
+                            中国。 本书分为三部分，
+                            1986 年 12 月首次出版。
+                            本书以中国 70 年代中期至 1980 年代中期为背景，经历了复杂的冲突和
+                            纠葛以孙少安和孙少平两兄弟为中心，描绘了
+                            很多当时各行各业的普通人的形象；
+                            劳动与爱情、挫折与追求、痛苦与喜悦、日常生活与巨大的社会矛盾
+                            交织在一起，深刻展现了普通人的艰难曲折之路
+                            穿越了大时代的历史进程。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                            了解更多</a>
+
+                        </div>
+                        <!--Grid column-->
+
+                        <div class="col-md-2"></div>
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;百年孤独&raquo; </strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Garcia Márquez (哥伦比亚)</strong>
+                          </h6>
+                          <p class="pb-3">《百年孤独》是哥伦比亚作家加西亚创作的小说。
+                            马尔克斯，这是他的杰作，也是拉丁美洲魔幻现实主义的杰作
+                            文学。
+                            它被誉为“一部再现拉丁文历史和社会景观的伟大作品”。
+                            美国。”
+                            这部作品讲述了布恩迪亚家族七代人的传奇故事，以及
+                            加勒比海沿岸小镇马孔多百年兴衰，
+                            反映了拉丁美洲在过去一个世纪中不断变化的历史。
+                            作品融合了神话传说、民间故事、宗教典故等
+                            神秘因素，巧妙地融合现实与幻觉，
+                            展现波澜壮阔的想象世界，成为最重要的经典之一
+                            20世纪的文学杰作。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                        <!--Grid row-->
+                      </div>
+                      <br>
+                      <!--Grid row-->
+                      <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;百万英镑&raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Mark Twain (美国)</strong>
+                          </h6>
+                          <p class="pb-3">《百万英镑》是美国作家马克·吐温创作的中短篇小说，发表于1893年。讲述了一个穷困潦倒的办事员美国小伙子亨利·亚当斯在伦敦的一次奇遇。
+                            伦敦的两位富翁兄弟打赌，把一张无法兑现的百万大钞借给亨利，看他在一个月内如何收场。一个月的期限到了，亨利不仅没有饿死或被捕，反倒成了富翁，并且赢得了一位漂亮小姐的芳心。文章以其略带夸张的艺术手法再现大师小说中讽刺与幽默，揭露了20世纪初英国社会的拜金主义思想。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank"
+                            class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book" aria-hidden="true"></i>
+                            了解更多</a>
+                        </div>
+                      </div>
+                      <!--Grid row-->
+
+                    </div>
+
+                    <div class="tab-pane fade p-5" id="panel3" role="tabpanel">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;投资于人&raquo;</strong>
+                          </h3><br>
+                          <h6 class="purple-text">
+                            <strong> Theodore Schultz (美国)</strong>
+                          </h6>
+                          <p class="pb-3">本书是诺贝尔奖获得者西奥多·舒尔茨的重要著作之一。
+                            这项工作也是舒尔茨人力资本研究的一项重要工作。 这本书
+                            由七章组成。 前四章主要是关于作者的
+                            理论阐述，涉及贫困经济学，人口质量经济学，
+                            教育经济学和人类时间价值经济学； 最后三章是关于
+                            作者的美国教育、科学研究和国际对混乱和
+                            援助机构的扭曲。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+
+                        </div>
+                        <!--Grid column-->
+
+                        <div class="col-md-2"></div>
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;资本积累理论 &raquo; </strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Joan Robinson (英国)</strong>
+                          </h6>
+                          <p class="pb-3">作者将社会生产分为投资品和消费品，
+                            并将社会总收入分为利润和工资。 在这个模型下，他探索了
+                            资本家的“本能冲动”，探讨人口增长和
+                            资本积累的技术进步，国民收入分配分析
+                            利润与工资之间的关系与经济增长的机制和条件
+                            资本积累的过程。
+                          </p>
+                          <br><br><br>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                        <!--Grid row-->
+                      </div>
+                      <br>
+                      <!--Grid row-->
+                      <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;政治经济学的过去和现在 &raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> L.Robbins (英国)</strong>
+                          </h6>
+                          <p class="pb-3">在这本书中，作者结合了他对经济史的研究。
+                            思想与经济政策研究，并系统阐述两者的关系
+                            早期经济思想与其实际应用之间的关系。 范围包括
+                            消费、生产组织和整个系统的稳定性、福利和
+                            分销和国际贸易，并试图测试这些的范围和意义
+                            理论是有效的。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                      </div>
+                      <!--Grid row-->
+
+                    </div>
+
+                    <div class="tab-pane fade p-5" id="panel4" role="tabpanel">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;战略论&raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Karl von Clausewitz (德国)</strong>
+                          </h6>
+                          <p class="pb-3">《战略论》被誉为现代西方军事理论的经典之作，
+                            对西方现代军事思想的形成和发展起到了重要作用。它
+                            被誉为影响历史进程的100本书之一。克劳塞维茨
+                            他因此被视为现代西方军事理论的鼻祖。在里面
+                            书中，作者揭示了从属于政治的战争本质，指出
+                            人为因素，特别是精神力量的作用，阐述了人类社会发展的历史趋势。
+                            战争性质转变为内战，并讨论战略和战术、进攻和
+                            防御和战争的目的。战术与手段的辩证关系
+                            提出集中优势兵力歼灭敌人等理论。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+
+                        </div>
+                        <!--Grid column-->
+
+                        <div class="col-md-2"></div>
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;胜利的科学&raquo; </strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Suvorov (俄罗斯)</strong>
+                          </h6>
+                          <p class="pb-3">书中内容体现苏沃洛夫的战略战术思想和军事
+                            治国理政，包括军事成就、军事思想、指挥风格和指挥
+                            艺术等，并影响了几代俄罗斯军队。 之后
+                            十月革命，列宁的第一本红军士兵手册也引用了其主要原则。
+                            二战期间，苏联各级将领高度评价苏沃洛夫的军队
+                            战略和战术原则。 苏联最高主席团还颁布了
+                            1942 年 7 月制定了第一、第二和第三级苏沃洛。
+                            丈夫的军事勋章。 连同其作者的名字，“胜利的科学”
+                            受到世界各国军事理论家的广泛关注。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                        <!--Grid row-->
+                      </div>
+                      <br>
+                      <!--Grid row-->
+                      <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;论持久战&raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> 毛泽东 (中国)</strong>
+                          </h6>
+                          <p class="pb-3">《论持久战》是无产阶级革命家毛泽东
+                            1938 年 5 月 26 日至 6 月 3 日在延安抗战研究会议上的讲话。
+                            是一部关于中国抗日战争政策的军事政治著作。 这是一个伟大的
+                            工作。 马克思列宁主义经典军事理论于1938年7月首次发表，
+                            总结了抗战初期经验的基础。
+                            是毛泽东针对日本和中国国民党“中国必死”的部分成员
+                            “中国速胜论”，以及部分中国人的倾向
+                            共产党鄙视游击战。 打赢抗日战争的战略。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                      </div>
+                      <!--Grid row-->
+
+                    </div>
+
+                    <div class="tab-pane fade p-5" id="panel5" role="tabpanel">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;为什么不公平审判？ 西方审判史 &raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Kadri (England)</strong>
+                          </h6>
+                          <p class="pb-3">通过许多有趣的流行历史故事，本书清晰地追溯了
+                            刑事审判的发展史，用广阔的历史视角来展示
+                            过去审判的缺陷顽固地出现在现在，表明司法
+                            审判制度已经通过。 达到目前的高度将使读者获得道德
+                            和政治见解，并更好地了解当今不稳定的时代。
+                          </p>
+                          <br><br>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                        <!--Grid column-->
+
+                        <div class="col-md-2"></div>
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;扫起落叶好过冬&raquo; </strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> 林达 (中国)</strong>
+                          </h6>
+                          <p class="pb-3">本书分为五个系列：第一系列是关于美国的
+                            历史故事； 第二个系列是关于国家的法律规则； 第三
+                            系列是关于一些具体的案例，讲述司法过程的故事； 第四个
+                            系列主要通过修道士、苦行者和奥斯维辛集中营的故事讲述
+                            “不宽容”的恶果； 第五系列是作者的想法
+                            阅读和视听。 五个系列文章的故事性很强，
+                            不仅剧情跌宕起伏，内涵也很深。 这并不难
+                            让读者在轻松的阅读中感受思想的力量。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                        <!--Grid row-->
+                      </div>
+                      <br>
+                      <!--Grid row-->
+                      <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;寻找法律的印记 &raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> 余定宇 (中国)</strong>
+                          </h6>
+                          <p class="pb-3">什么是法律？ 这是本书作者提出的问题
+                            问。 跟随法律的印记，他踏上了伟大的精神之旅：通过
+                            尼罗河俾格米人对他发现的食用香蕉的先发制人的概念，证实了
+                            人类法最原始的足迹——“权利”的足迹； 通过审讯
+                            雅典娜基于古希腊神话中的人性，宣告了自然神学
+                            古希腊人的情感和宗教感情； 拿着鳞剑和
+                            蒙上正义女神的眼睛，它宣称古罗马人是“成熟和
+                            与法律稳定。” “对“公平正义”的期待。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                      </div>
+                      <!--Grid row-->
+
+                    </div>
+
+                    <div class="tab-pane fade p-5" id="panel6" role="tabpanel">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;生活之道&raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> William Osler (加拿大 )</strong>
+                          </h6>
+                          <p class="pb-3">这本书是威廉·奥斯勒的 20 次讲座的合集
+                            现代临床医学，被视为重要思想文献之一
+                            写于 20 世纪。 奥斯勒曾在麦吉尔大学担任医学教授
+                            宾夕法尼亚大学和约翰霍普金斯大学。 在书中，作者
+                            将他深厚的古典人文修养带入医学领域，
+                            触角涵盖医德、医疗和人道主义关怀，以及关系
+                            医生和病人之间。 字里行间充满了他睿智的人生和医术
+                            哲学。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                        <!--Grid column-->
+
+                        <div class="col-md-2"></div>
+
+                        <!--Grid column-->
+                        <div class="col-md-5">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;细胞&raquo; </strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Joshua Z. Rappoport (美国)</strong>
+                          </h6>
+                          <p class="pb-3">Rappoport 作品的语言非常简洁，读起来引人入胜。 他
+                            可以高效、轻松地传达最前沿的想法，奠定基础
+                            细胞生物学，并指出细胞生物学思想和历史的亮点
+                            技术。 他用生动的意图和尖锐的比喻，成功地升华了
+                            以诗意和尊重的方式主题。
+                          </p>
+                          <br><br>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                        <!--Grid row-->
+                      </div>
+                      <br>
+                      <!--Grid row-->
+                      <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                          <h3 class="py-3 font-weight-bold">
+                            <strong>&laquo;白袍&raquo;</strong>
+                          </h3>
+                          <h6 class="purple-text">
+                            <strong> Ellen L.Rothman (美国)</strong>
+                          </h6>
+                          <p class="pb-3">作者 Ellen L.Rothman 是 1993 年就读于哈佛医学院的学生。 她
+                            用清晰细腻的文字写下她在哈佛医学的4年成长
+                            学校。 全书共分三章，分别是《哈佛第一年》、《哈佛
+                            第二年”和“两年临床实习”。通过本书，我们不仅可以真正
+                            了解一个年轻的学生如何成长为一名身穿白袍的医生，但也要遵循
+                            作者开展持续医学人文思维：如何应对
+                            医患关系，如何克服学习，实习各种
+                            困难，如何面对生死考验。
+                          </p>
+                          <a href="https://yuedu.baidu.com/" target="_blank" class="btn btn-secondary btn-rounded btn-md"><i class="fa fa-book"
+                              aria-hidden="true"></i>
+                              了解更多</a>
+                        </div>
+                      </div>
+                      <!--Grid row-->
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section id="why" class="text-center py-5" style="background-color: #eee;">
+      <div class="container">
+        <h2 class="h1-responsive font-weight-bold text-center my-5">为什么我们需要阅读</h2>
+        <div class="row">
+          <div class="col-md-2">
+            <img src="img/46.jpg" class="rounded-circle" alt="Sample avatar image.">
+          </div>
+          <div class="col-md-1"></div>
+          <p class="col-md-6 pb-3 text-center"><br><br><br>对我来说，阅读是驱散生活中不快乐的最好方式
+            生活。 没有学习不能驱散的苦恼。 <br><br>——孟德斯鸠</p>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <p class="col-md-6 pb-3 text-center"><br><br><br>读所有深奥的书应该是这样的：第一，用
+            你自己的理解能力； 第二，用自己的能力去批评。 <br><br>——郭沫若</p>
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <img src="img/47.jpg" class="rounded-circle" alt="Sample avatar image.">
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-md-2">
+            <img src="img/48.jpg" class="rounded-circle" alt="Sample avatar image.">
+          </div>
+          <div class="col-md-1"></div>
+          <p class="col-md-6 pb-3 text-center"><br><br><br>读书使人充实，讨论使人机智，笔记
+            使人准确，读史使人睿智，读诗使人聪明，
+            数学使人深思，科学使人深刻，伦理使人严肃，逻辑使人
+            修辞使人雄辩。 任何学到东西的人都会成为一个角色。 <br><br>——培根</p>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <p class="col-md-6 pb-3 text-center"><br><br><br>阅读是一场心灵的盛大之旅。 你可以发现著名的
+            高山、巨河、历史遗迹、深林幽谷、奇花异草。
+            时间。 <br><br>——弗朗士</p>
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <img src="img/49.jpg" class="rounded-circle" alt="Sample avatar image.">
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <!--Main layout-->
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small mdb-color pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <div class="row text-center text-md-left mt-3 pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
+          <a href="index.html" class=" mb-4 font-weight-bold">美食</a>
+          <p><br><a href="index.html#share">分享美味</a></p>
+          <p><a href="index.html#cuisine">国际美食</a></p>
+          <p><a href="index.html#learn">学做美食</a></p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <a href="Music.html" class=" mb-4 font-weight-bold">音乐</a>
+          <p>
+            <br>
+            <a href="Music.html#list">音乐歌单</a>
+          </p>
+          <p>
+            <a href="Music.html#video">音乐视频</a>
+          </p>
+          <p>
+            <a href="Music.html#classic">经典音乐</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <a href="Scenery.html" class="mb-4 font-weight-bold">风景</a>
+          <p>
+            <br>
+            <a href="Scenery.html#oriental">东方色彩</a>
+          </p>
+          <p>
+            <a href="Scenery.html#western">西方色彩</a>
+          </p>
+          <p>
+            <a href="Scenery.html#beautiful">美丽风景</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <a href="Read.html" class="mb-4 font-weight-bold">阅读</a>
+          <p>
+            <br>
+            <a href="Read.html#statistics">阅读统计表</a>
+          </p>
+          <p>
+            <a href="Read.html#recommendations">推荐</a>
+          </p>
+          <p>
+            <a href="Read.html#why">为什么我们需要阅读</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
+          <a href="Film.html" class=" mb-4 font-weight-bold">电影</a>
+          <p>
+            <br>
+            <a href="Film.html#classic">经典电影</a>
+          </p>
+          <p>
+            <a href="Film.html#star">电影明星</a>
+          </p>
+          <p>
+            <a href="Film.html#recommended">今日推荐</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+
+      <hr>
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-coffee" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fa fa-music" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-book" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">
+            <i class="fa fa-film" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href="https://yuedu.baidu.com/">Yuedu.baidu.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+
+    document.getElementById("index").onclick = function () {
+      window.location.href = "index.html";
+    }
+    document.getElementById("Music").onclick = function () {
+      window.location.href = "Music.html";
+    }
+    document.getElementById("Scenery").onclick = function () {
+      window.location.href = "Scenery.html";
+    }
+    document.getElementById("Read").onclick = function () {
+      window.location.href = "Read.html";
+    }
+    document.getElementById("Film").onclick = function () {
+      window.location.href = "Film.html";
+    }
+    document.getElementById("Summary").onclick = function () {
+      window.location.href = "Summary.html";
+    }
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["0~8", "9~13", "14~17", "0~17"],
+        datasets: [{
+          label: '数量 ',
+          data: [6.34, 7.62, 8.21, 7.19],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+
+    //line
+    var ctxL = document.getElementById("lineChart").getContext('2d');
+    var myLineChart = new Chart(ctxL, {
+      type: 'line',
+      data: {
+        labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"],
+        datasets: [{
+          label: "变化率(%)",
+          data: [69.7, 72.0, 77.1, 77.4, 76.3, 76.7, 78.6, 79.6, 79.9, 80.3],
+          backgroundColor: [
+            'rgba(105, 0, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(200, 99, 132, .7)',
+          ],
+          borderWidth: 2
+        }
+        ]
+      },
+      options: {
+        responsive: true
+      }
+    });
+
+
+    new Chart(document.getElementById("horizontalBar"), {
+      "type": "horizontalBar",
+      "data": {
+        "labels": ["书籍", "电子书", "报纸", "期刊"],
+        "datasets": [{
+          "label": "2017年百分比(%)",
+          "data": [4.66, 3.12, 33.62, 4.51],
+          "fill": false,
+          "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 99, 132, 0.2)",
+            "rgba(255, 99, 132, 0.2)", "rgba(255, 99, 132, 0.2)"
+          ],
+          "borderColor": ["rgb(255, 99, 132)", "rgb(255, 99, 132)", "rgb(255, 99, 132)",
+            "rgb(255, 99, 132)"
+          ],
+          "borderWidth": 1
+        },
+        {
+          "label": "2016年百分比(%)",
+          "data": [3.85, 3.21, 44.64, 3.44],
+          "fill": false,
+          "backgroundColor": ["rgba(75, 192, 192, 0.2)", "rgba(75, 192, 192, 0.2)",
+            "rgba(75, 192, 192, 0.2)", "rgba(75, 192, 192, 0.2)"
+          ],
+          "borderColor": ["rgb(75, 192, 192)", "rgb(75, 192, 192)", "rgb(75, 192, 192)",
+            "rgb(75, 192, 192)"
+          ],
+          "borderWidth": 1
+        }
+        ]
+      },
+      "options": {
+        "scales": {
+          "xAxes": [{
+            "ticks": {
+              "beginAtZero": true
+            }
+          }]
+        }
+      }
+    });
+
+
+
+    var ctxP = document.getElementById("labelChart").getContext('2d');
+    var myPieChart = new Chart(ctxP, {
+      plugins: [ChartDataLabels],
+      type: 'pie',
+      data: {
+        labels: ["应该 ", "不应该", "无所谓"],
+        datasets: [{
+          data: [210, 130, 120],
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870"]
+        }]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          position: 'right',
+          labels: {
+            padding: 20,
+            boxWidth: 10
+          }
+        },
+        plugins: {
+          datalabels: {
+            formatter: (value, ctx) => {
+              let sum = 0;
+              let dataArr = ctx.chart.data.datasets[0].data;
+              dataArr.map(data => {
+                sum += data;
+              });
+              let percentage = (value * 100 / sum).toFixed(2) + "%";
+              return percentage;
+            },
+            color: 'white',
+            labels: {
+              title: {
+                font: {
+                  size: '16'
+                }
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // 以下为动画效果新添加的两条语句
+    // Adding animations to the sections, 使用的是淡入, 你也可以试试zoomIn等动画
+    $("section").addClass("wow fadeIn");
+    // Animations Init, 注意必须放在ready方法中以防WOW对象没能加载成功
+    $(document).ready(function () {
+      new WOW().init();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Web</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/smile.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Main navigation -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto smooth-scroll">
+                        <li class="nav-item">
+                          <a class="nav-link" id="index" data-offset="90">美食
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="Music" data-offset="90">音乐</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="Scenery" data-offset="90">风景</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="Read" data-offset="90">阅读</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="Film" data-offset="30">电影</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="Summary" data-offset="90">结业报告</a>
+                        </li>
+                      </ul>
+                    <!-- Social Icon  -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="fab fa-facebook-f light-green-text-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="fab fa-twitter light-green-text-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="fab fa-instagram light-green-text-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+        <!-- Full Page Intro -->
+        <div class="view">
+            <img src="img/50.jpeg">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+                <!-- Content -->
+                <div class="container px-md-3 px-sm-0">
+                    <!--Grid row-->
+                    <div class="row wow fadeIn">
+                        <!--Grid column-->
+                        <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+                            <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">音乐</h3>
+                            <hr class="hr-light my-4 w-125">
+                            <h4 class="subtext-header mt-2 mb-4">音乐表达的是无法用语言描述，却又不可能对其保持沉默的东西</h4>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+    </header>
+    <!--Main layout-->
+
+    <body>
+
+        <section id="list" class="text-center py-5" style="background-color: #eee;">
+            <div class="container">
+
+                <!-- Section heading -->
+                <h2 class="h1-responsive font-weight-bold mb-5">音乐歌单 </h2>
+                <!-- Section description -->
+                <p class="grey-text w-responsive mx-auto mb-5">音乐是生活中最好的一面</p>
+
+                <div class="row">
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-3">
+                        <p><button id="btn1" type="button" class="btn btn-light-blue btn-rounded">起风了</button></p>
+                        <p><button id="btn2" type="button" class="btn btn-light-blue btn-rounded">可惜我是水瓶座</button></p>
+                        <p><button id="btn3" type="button" class="btn btn-light-blue btn-rounded">平凡之路</button></p>
+                        <p><button id="btn4" type="button" class="btn btn-light-blue btn-rounded">岁月神偷</button></p>
+                        <p><button id="btn5" type="button" class="btn btn-light-blue btn-rounded">My heart will go
+                                on</button></p>
+                        <p><button id="btn6" type="button" class="btn btn-light-blue btn-rounded">River flows in
+                                you</button></p>
+                        <p><button id="btn7" type="button" class="btn btn-light-blue btn-rounded">Something just like
+                                this</button></p>
+                    </div>
+
+                    <div class="col-md-2"></div>
+
+                    <div class="col-md-6">
+                        <img id="xuanzhuan" src="img/51.jpg" class="rounded-circle border-radius:50%"
+                            alt="Sample avatar image.">
+                    </div>
+
+                </div>
+
+                <p id="typesel">
+                    <option value="sequence"></option>
+                </p>
+                <audio id="player" style="width:500px" controls>不能播放</audio>
+
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <section id="video" class="text-center py-5" style="background-color: #eee;">
+            <div class="container">
+
+                <!-- Section heading -->
+                <h2 class="h1-responsive font-weight-bold mb-5">音乐视频</h2>
+                <!-- Section description -->
+                <p class="grey-text w-responsive mx-auto mb-5">没有音乐，生命是没有价值的</p>
+
+                <div class="row">
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-4">
+                        <video controls autobuffer="true" width="100%" poster="img/52.png">
+                            <source src="mp4/平凡之路.mp4">
+                            不支持的浏览器
+                        </video>
+                    </div>
+
+                    <div class="col-md-2"></div>
+
+                    <div class="col-md-4">
+                        <video controls autobuffer="true" width="100%" poster="img/53.png">
+                            <source src="mp4/小幸运.mp4">
+                            不支持的浏览器
+                        </video>
+                    </div>
+
+                </div>
+
+                <br><br>
+
+                <div class="row">
+
+                    <div class="col-md-4"></div>
+
+                    <div class="col-md-4">
+                        <video controls autobuffer="true" width="100%" poster="img/54.png">
+                            <source src="mp4/光辉岁月.mp4">
+                            不支持的浏览器
+                        </video>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <section id="classic" class="text-center py-5" style="background-color: #eee;">
+            <div class="container">
+
+                <!-- Section heading -->
+                <h2 class="h1-responsive font-weight-bold mb-5">经典音乐</h2>
+                <!-- Section description -->
+                <p class="grey-text w-responsive mx-auto mb-5">让自由的艺术和音乐本身美的规律冲破技术的樊篱，给思想和心灵以自由</p>
+
+                <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">Music Title
+                            </th>
+                            <th class="th-sm">Singer
+                            </th>
+                            <th class="th-sm">Album
+                            </th>
+                            <th class="th-sm">Time
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>My heart will go on</td>
+                            <td>Céline Dion</td>
+                            <td>My Love: Ultimate Essential Collection (North American Version)</td>
+                            <td>04:41</td>
+                        </tr>
+                        <tr>
+                            <td>遇见</td>
+                            <td>孙燕姿</td>
+                            <td>白羽毛之恋 华语典藏情歌</td>
+                            <td>03:29</td>
+                        </tr>
+                        <tr>
+                            <td>Because of You</td>
+                            <td>Kelly Clarkson</td>
+                            <td>Because Of You</td>
+                            <td>03:40</td>
+                        </tr>
+                        <tr>
+                            <td>感谢你曾来过</td>
+                            <td>周思涵 / Ayo97</td>
+                            <td>卧龙与酒</td>
+                            <td>04:10</td>
+                        </tr>
+                        <tr>
+                            <td>岁月神偷</td>
+                            <td>金玟岐</td>
+                            <td>完美世界</td>
+                            <td>04:04</td>
+                        </tr>
+                        <tr>
+                            <td>后来</td>
+                            <td>刘若英</td>
+                            <td>我等你</td>
+                            <td>05:41</td>
+                        </tr>
+                        <tr>
+                            <td>可惜我是水瓶座</td>
+                            <td>杨千嬅</td>
+                            <td>Simply Me</td>
+                            <td>03:36</td>
+                        </tr>
+                        <tr>
+                            <td>River Flows In You</td>
+                            <td>Kuschelklassik Piano Dreams, Vol. 2</td>
+                            <td>Martin Ermen</td>
+                            <td>03:18</td>
+                        </tr>
+                        <tr>
+                            <td>过客</td>
+                            <td>周思涵</td>
+                            <td>过客</td>
+                            <td>04:30</td>
+                        </tr>
+                        <tr>
+                            <td>当你走了</td>
+                            <td>吾尊</td>
+                            <td>当你走了</td>
+                            <td>03:53</td>
+                        </tr>
+                        <tr>
+                            <td>My Soul</td>
+                            <td>JJuly</td>
+                            <td>Time...</td>
+                            <td>03:50</td>
+                        </tr>
+                        <tr>
+                            <td>其实我就在你方圆几里</td>
+                            <td>陈壹千</td>
+                            <td>其实我就在你方圆几里</td>
+                            <td>04:01</td>
+                        </tr>
+                        <tr>
+                            <td>On My Own</td>
+                            <td>Ashes Remain</td>
+                            <td>What I've Become</td>
+                            <td>02:52</td>
+                        </tr>
+                        <tr>
+                            <td>你是年少的欢喜</td>
+                            <td>孟大C</td>
+                            <td>你是年少的欢喜</td>
+                            <td>04:56</td>
+                        </tr>
+                        <tr>
+                            <td>追光者</td>
+                            <td>岑宁儿</td>
+                            <td>夏至未至</td>
+                            <td>03:55</td>
+                        </tr>
+                        <tr>
+                            <td>Sakura Tears</td>
+                            <td>Snigellin</td>
+                            <td>最新热歌慢摇110</td>
+                            <td>03:04</td>
+                        </tr>
+                        <tr>
+                            <td>最美的期待</td>
+                            <td>周笔畅</td>
+                            <td>最美的期待</td>
+                            <td>03:30</td>
+                        </tr>
+                        <tr>
+                            <td>Tassel</td>
+                            <td>Systems Administrator</td>
+                            <td>Cymophane</td>
+                            <td>04:30</td>
+                        </tr>
+                        <tr>
+                            <td>Alone</td>
+                            <td>Alan Walker</td>
+                            <td>Alone</td>
+                            <td>02:38</td>
+                        </tr>
+                        <tr>
+                            <td>平凡之路</td>
+                            <td>朴树</td>
+                            <td>猎户星座</td>
+                            <td>05:02</td>
+                        </tr>
+                        <tr>
+                            <td>起风了</td>
+                            <td>买辣椒也用券</td>
+                            <td>起风了</td>
+                            <td>05:25</td>
+                        </tr>
+                        <tr>
+                            <td>Despacito (Remix)</td>
+                            <td>Luis Fonsi</td>
+                            <td>Despacito (Remix)</td>
+                            <td>03:48</td>
+                        </tr>
+                        <tr>
+                            <td>Something Just Like This</td>
+                            <td>The Chainsmokers</td>
+                            <td>Something Just Like This</td>
+                            <td>04:07</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="th-sm">Music Title
+                            </th>
+                            <th class="th-sm">Singer
+                            </th>
+                            <th class="th-sm">Album
+                            </th>
+                            <th class="th-sm">Time
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small mdb-color pt-4">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+
+                <div class="row text-center text-md-left mt-3 pb-3">
+
+                    <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
+            <a href="index.html" class=" mb-4 font-weight-bold">美食</a>
+            <p><br><a href="index.html#share">分享美味</a></p>
+            <p><a href="index.html#cuisine">国际美食</a></p>
+            <p><a href="index.html#learn">学做美食</a></p>
+          </div>
+          <!-- Grid column -->
+  
+          <hr class="w-100 clearfix d-md-none">
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <a href="Music.html" class=" mb-4 font-weight-bold">音乐</a>
+            <p>
+              <br>
+              <a href="Music.html#list">音乐歌单</a>
+            </p>
+            <p>
+              <a href="Music.html#video">音乐视频</a>
+            </p>
+            <p>
+              <a href="Music.html#classic">经典音乐</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <hr class="w-100 clearfix d-md-none">
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <a href="Scenery.html" class="mb-4 font-weight-bold">风景</a>
+            <p>
+              <br>
+              <a href="Scenery.html#oriental">东方色彩</a>
+            </p>
+            <p>
+              <a href="Scenery.html#western">西方色彩</a>
+            </p>
+            <p>
+              <a href="Scenery.html#beautiful">美丽风景</a>
+            </p>
+          </div>
+  
+          <!-- Grid column -->
+  
+          <hr class="w-100 clearfix d-md-none">
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <a href="Read.html" class="mb-4 font-weight-bold">阅读</a>
+            <p>
+              <br>
+              <a href="Read.html#statistics">阅读统计表</a>
+            </p>
+            <p>
+              <a href="Read.html#recommendations">推荐</a>
+            </p>
+            <p>
+              <a href="Read.html#why">为什么我们需要阅读</a>
+            </p>
+          </div>
+  
+          <!-- Grid column -->
+  
+          <hr class="w-100 clearfix d-md-none">
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
+            <a href="Film.html" class=" mb-4 font-weight-bold">电影</a>
+            <p>
+              <br>
+              <a href="Film.html#classic">经典电影</a>
+            </p>
+            <p>
+              <a href="Film.html#star">电影明星</a>
+            </p>
+            <p>
+              <a href="Film.html#recommended">今日推荐</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+                </div>
+
+                <hr>
+
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline text-center">
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-fb mx-1">
+                            <i class="fa fa-coffee" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-tw mx-1">
+                            <i class="fa fa-music" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-gplus mx-1">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-li mx-1">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-dribbble mx-1">
+                            <i class="fa fa-film" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Social buttons -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2021 Copyright:
+                <a href="https://music.163.com">Music.163.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+
+        <!-- Your custom scripts (optional) -->
+        <script>
+
+    document.getElementById("index").onclick = function () {
+      window.location.href = "index.html";
+    }
+    document.getElementById("Music").onclick = function () {
+      window.location.href = "Music.html";
+    }
+    document.getElementById("Scenery").onclick = function () {
+      window.location.href = "Scenery.html";
+    }
+    document.getElementById("Read").onclick = function () {
+      window.location.href = "Read.html";
+    }
+    document.getElementById("Film").onclick = function () {
+      window.location.href = "Film.html";
+    }
+    document.getElementById("Summary").onclick = function () {
+      window.location.href = "Summary.html";
+    }
+
+            var music = ["mp3/起风了.mp3",
+                "mp3/可惜我是水瓶座.mp3",
+                "mp3/平凡之路.mp3",
+                "mp3/岁月神偷.mp3",
+                "mp3/My heart will go on.mp3",
+                "mp3/River flows in you.mp3",
+                "mp3/Something just like this.mp3"];
+
+            var index = 0;
+            var playtype;
+
+            window.onload = function () {
+                var typesel = document.getElementById("typesel");
+                typesel.onchange = function () {
+                    window.playtype = typesel.value;//获取下拉菜单的值
+                }
+                //指定播放器播放哪个音乐
+                var player = document.getElementById("player");
+                var btn1 = document.getElementById("btn1");
+                var btn2 = document.getElementById("btn2");
+                var btn3 = document.getElementById("btn3");
+                var btn4 = document.getElementById("btn4");
+                var btn5 = document.getElementById("btn5");
+                var btn6 = document.getElementById("btn6");
+                var btn7 = document.getElementById("btn7");
+
+                xuanzhuan.style.animationPlayState = "paused";
+
+                player.src = music[index];
+                btn1.onclick = function () {
+                    player.src = music[0];
+                    player.play();
+                    index = 0;
+                }
+                btn2.onclick = function () {
+                    player.src = music[1];
+                    player.play();
+                    index = 1;
+                }
+                btn3.onclick = function () {
+                    player.src = music[2];
+                    player.play();
+                    index = 2;
+                }
+                btn4.onclick = function () {
+                    player.src = music[3];
+                    player.play();
+                }
+                btn5.onclick = function () {
+                    player.src = music[4];
+                    player.play();
+                }
+                btn6.onclick = function () {
+                    player.src = music[5];
+                    player.play();
+                }
+                btn7.onclick = function () {
+                    player.src = music[6];
+                    player.play();
+                }
+                //当音乐播放完停止时，自动停止图片旋转
+                player.onended = function ()  //当前音乐结束后执行
+                {
+                    xuanzhuan.style.animationPlayState = "paused";
+                }
+                var statu = document.getElementById("player");
+                statu.addEventListener('playing', function () { //播放中
+                    xuanzhuan.style.animationPlayState = "running";
+                });
+                statu.addEventListener('pause', function () { //播放暂停
+                    xuanzhuan.style.animationPlayState = "paused";
+                });
+            }
+
+
+            $("section").addClass("wow fadeIn");
+            // Animations Init, 注意必须放在ready方法中以防WOW对象没能加载成功
+            $(document).ready(function () {
+                new WOW().init();
+            });
+        </script>
+
+    </body>
+
+</html>
